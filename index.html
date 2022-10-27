@@ -1,19 +1,72 @@
-<!DOCTYPE>
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhinash Mallick</title>
     <style>
-      body { background: red; }
-      div { 
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 3rem;
-      }
-      div h1 { color: #ffffff; }
+        .header {
+            height: 95vh;
+            background-image: linear-gradient(to right bottom, rgb(0 0 0), rgb(0 0 0 / 80%)), url(./background.jpg);
+            background-size: cover;
+            background-position: top;
+            position: relative;
+            /*clip-path: polygon(x y, x y, x y, x y);*/
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+            /*triangle
+                clip-path: polygon(50% 0, 100% 100%, 0 100%);*/
+            /*.logo:hover{
+                animation: moveInRight 1s ease-out;
+            }
+            */ }
+            @media (max-width: 37.5em) {
+                .header {
+                -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+            .header__logo-box {
+                position: absolute;
+                top: 4rem;
+                left: 4rem; }
+            .header__logo {
+                height: 6.5rem; }
+            .header__text-box {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                /*background-color: red;*/
+                transform: translate(-50%, -50%);
+                text-align: center; 
+            }
+        .heading-primary {
+            font-size: 3rem;
+            background-image: linear-gradient(to right bottom, #17d69a 1%, #00baf2 100%, #fff);
+            text-decoration: overline;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-animation: text 10s infinite linear;
+        }
+        @-webkit-keyframes text {
+            from {
+            -webkit-filter: hue-rotate(0deg);
+            }
+            to {
+            -webkit-filter: hue-rotate(-360deg);
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div><h1>Coming Soon!</h1></div>
-  </body>
+</head>
+<body>
+    <header class="header">
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Coming Soon !</span>
+            </h1>
+
+        </div>
+        
+    </header>
+</body>
 </html>
